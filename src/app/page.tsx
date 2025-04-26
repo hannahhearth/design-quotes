@@ -14,7 +14,7 @@ function getQuizRound() {
   const quote = quotes[quoteIndex];
 
   // Get 2 random distractors (not the author)
-  const distractors = [];
+  const distractors: string[] = [];
   const possibleDistractors = people.filter((p) => p !== quote.author);
   while (distractors.length < 2) {
     const idx = getRandomInt(possibleDistractors.length);
@@ -75,7 +75,7 @@ export default function Home() {
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 mb-8 min-h-[220px] flex flex-col justify-center">
           <blockquote className="mb-6">
             <p className="text-xl sm:text-2xl font-serif italic mb-6 text-gray-800 dark:text-gray-200">
-              "{quiz.quote.text}"
+              &#8220;{quiz.quote.text}&#8221;
             </p>
           </blockquote>
           <div className="flex flex-col gap-4">

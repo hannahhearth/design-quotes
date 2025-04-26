@@ -72,10 +72,10 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-transparent p-6">
       <main className="w-full max-w-2xl mx-auto text-center">
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 mb-8 min-h-[220px] flex flex-col justify-center">
+        <div className="rounded-2xl p-8 mb-8 min-h-[220px] flex flex-col justify-center">
           <blockquote className="mb-6">
-            <p className="text-xl sm:text-2xl font-serif italic mb-6 text-gray-800 dark:text-gray-200">
-              &#8220;{quiz.quote.text}&#8221;
+            <p className="text-xl sm:text-2xl italic mb-6 text-gray-800 dark:text-gray-200">
+              &ldquo;{quiz.quote.text}&rdquo;
             </p>
           </blockquote>
           <div className="flex flex-col gap-4">
@@ -114,7 +114,7 @@ export default function Home() {
           </div>
         </div>
         {status === 'correct' && (
-          <div className="mb-6 text-green-700 bg-green-50 border border-green-200 rounded-lg px-4 py-2 transition-all">
+          <div className="mb-6 text-green-700 px-4 py-2 transition-all">
             🎉 Correct! {quiz.answer} said this. <br />
             <button
               onClick={handlePlayAgain}
@@ -125,7 +125,7 @@ export default function Home() {
           </div>
         )}
         {status === 'incorrect' && (
-          <div className="mb-6 text-red-700 bg-red-50 border border-red-200 rounded-lg px-4 py-2 transition-all">
+          <div className="mb-6 text-red-700 px-4 py-2 transition-all">
             ❌ Not quite! Try again.
           </div>
         )}
